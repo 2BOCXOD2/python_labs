@@ -8,7 +8,7 @@ def transpose(matrica):
         new_matrica = []
         for i in matrica:
             if stroki != len(i):
-                return ValueError
+                raise ValueError
         for x in range(stroki):
             spi = []
             for y in range(stolbci):
@@ -26,7 +26,7 @@ def row_sums(matrica):
     stroki = len(matrica[0])
     for i in matrica:
         if stroki != len(i):
-            return ValueError
+            raise ValueError
     for x in range(stolbci):
         summ = 0
         for y in range(stroki):
@@ -37,15 +37,15 @@ def row_sums(matrica):
 matrica_2 = [[-1, 1], [10, -10]]
 otvet_2 = row_sums(matrica_2)
 print(otvet_2)
-"""
 
+"""
 def col_sums(matrica):
     new_matrica = []
     stolbci = len(matrica)
     stroki = len(matrica[0])
     for i in matrica:
         if stroki != len(i):
-            return ValueError
+            raise ValueError
     for x in range(stroki):
         summ = 0
         for y in range(stolbci):

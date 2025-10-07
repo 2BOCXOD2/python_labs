@@ -1,7 +1,7 @@
 def format_record(rec: tuple[str, str, float]):
     for i in rec:
         if i == '':
-            return ValueError
+            raise ValueError
     new_dannye = ""
     fio = rec[0]
     fio = fio.split()
