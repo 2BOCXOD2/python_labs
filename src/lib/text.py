@@ -36,7 +36,16 @@ def tokenize(text: str):
                 new_text = f"{new_text + text[i]} "
             else:
                 new_text = f"{new_text + text[i]}"
-        '''
+
+        return new_text
+    else:
+        raise TypeError
+
+texxt = "привет мир"
+print(tokenize(texxt))
+print(123)
+
+'''
         new_text_2 = ''
         for j in alf:
             new_text = new_text.split(j)
@@ -46,12 +55,4 @@ def tokenize(text: str):
                     new_text_2 = f"{new_text_2 + new_text[z]} "
                 else:
                     new_text_2 = f"{new_text_2 + new_text[z]}"
-        '''
-
-        return new_text
-    else:
-        raise TypeError
-
-texxt = "привет мир"
-print(tokenize(texxt))
-print(123)
+'''
