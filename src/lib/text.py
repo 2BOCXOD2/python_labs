@@ -54,3 +54,4 @@ def tokenize(text: str):
 
 texxt = "привет мир"
 print(tokenize(texxt))
+print(123)
