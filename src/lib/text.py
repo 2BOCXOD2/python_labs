@@ -27,7 +27,7 @@ print(normalize(textt, casefold=True, yo2e=True))
 
 def tokenize(text: str):
     if type(text) == str:
-        alf = ",.!_;:?"
+        alf = ",.!_;:?😀"
         text = text.split()
         lenn = len(text)
         new_text = ''
@@ -50,5 +50,32 @@ def tokenize(text: str):
         return new_text
     else:
         raise TypeError
-texxt = "по-настоящему круто"
+texxt = "emoji 😀 не слово"
 print(tokenize(texxt))
+
+'''
+def count_freq(dannye):
+    new_dannye = []
+    for i in dannye:
+        if i in new_dannye:
+            pass
+        else:
+            new_dannye.append(i)
+    slovar = {}
+    for z in new_dannye:
+        col = dannye.count(z)
+        slovar[z] = col
+    return slovar
+def top_n(dictt):
+    a = []
+    for key, value in dictt.items():
+        a.append((key, value))
+    otv = a.sort()
+
+    
+    otv = sorted(a, key = lambda x: (x[1]), reverse=True)
+    return otv
+spisok = ["bb","aa","bb","aa","cc"]
+print(count_freq(spisok))
+print(top_n(count_freq(spisok)))
+'''
