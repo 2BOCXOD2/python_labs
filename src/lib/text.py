@@ -24,7 +24,7 @@ def normalize(text: str, *, casefold: bool = True, yo2e: bool = True):
 textt = "   \nЕеЁё   \rАБвгД   \t12(%№?*)?;         "
 print(normalize(textt, casefold=True, yo2e=True))
 '''
-
+'''
 def tokenize(text: str):
     if type(text) == str:
         alf = ",.!_;:?😀"
@@ -66,16 +66,17 @@ def count_freq(dannye):
         col = dannye.count(z)
         slovar[z] = col
     return slovar
-def top_n(dictt):
+def top_n(dictt, n_top):
     a = []
     for key, value in dictt.items():
         a.append((key, value))
     otv = a.sort()
-
-    
     otv = sorted(a, key = lambda x: (x[1]), reverse=True)
-    return otv
+    otv_1 = []
+    for i in range(n_top):
+        otv_1.append(otv[i])
+    return otv_1
 spisok = ["bb","aa","bb","aa","cc"]
+n = 2
 print(count_freq(spisok))
-print(top_n(count_freq(spisok)))
-'''
+print(top_n(count_freq(spisok), n))
