@@ -21,9 +21,8 @@ def normalize(text: str, *, casefold: bool = True, yo2e: bool = True):
     else:
         raise TypeError
 
-textt = "   \nЕеЁё   \rАБвгД   \t12(%№?*)?;         "
-print(normalize(textt, casefold=True, yo2e=True))
-'''
+# textt = "   \nЕеЁё   \rАБвгД   \t12(%№?*)?;         "
+# print(normalize(textt, casefold=True, yo2e=True))
 
 def tokenize(text: str):
     if type(text) == str:
@@ -50,10 +49,9 @@ def tokenize(text: str):
         return new_text
     else:
         raise TypeError
-texxt = "emoji 😀 не слово"
-print(tokenize(texxt))
-'''
-'''
+# texxt = "emoji 😀 не слово"
+# print(tokenize(texxt))
+
 def count_freq(dannye):
     new_dannye = []
     for i in dannye:
@@ -76,8 +74,7 @@ def top_n(dictt, n_top):
     for i in range(n_top): # Вывод топа
         otv_1.append(otv[i])
     return otv_1
-spisok = ["bb","aa","bb","aa","cc"]
-n = 2
-print(count_freq(spisok))
-print(top_n(count_freq(spisok), n))
-'''
+# spisok = ["bb","aa","bb","aa","cc"]
+# n = 2
+# print(count_freq(spisok))
+# print(top_n(count_freq(spisok), n))
