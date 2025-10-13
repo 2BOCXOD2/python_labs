@@ -71,8 +71,12 @@ def top_n(dictt, n_top):
     otv = a.sort() # Сортировка по алфавиту
     otv = sorted(a, key = lambda x: (x[1]), reverse=True) # Сортировка по частоте
     otv_1 = []
-    for i in range(n_top): # Вывод топа
-        otv_1.append(otv[i])
+    if n_top > len(dictt): # Проверка длины
+        for i in range(len(dictt)): # Формирование топа
+            otv_1.append(otv[i])
+    else:
+        for i in range(n_top): # Формирование топа
+            otv_1.append(otv[i])
     return otv_1
 # spisok = ["bb","aa","bb","aa","cc"]
 # n = 2
