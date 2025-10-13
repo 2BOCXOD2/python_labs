@@ -1,7 +1,8 @@
 # **Лабораторная работа №3**
 ## **Задание A**
 ### Код задания №1
-```def normalize(text: str, *, casefold: bool = True, yo2e: bool = True):
+```
+def normalize(text: str, *, casefold: bool = True, yo2e: bool = True):
     if type(text) == str:
         if casefold == True: # Если включено, делает все буквы строчными
             text = text.casefold()
@@ -24,11 +25,12 @@
         raise TypeError
 
 textt = "   \nЕеЁё   \rАБвгД   \t12(%№?*)?;         "
-print(normalize(textt, casefold=True, yo2e=True))```
-
+print(normalize(textt, casefold=True, yo2e=True))
+```
 Скриншот задания №1
 ![01](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab03/1.1.PNG)
 ### Код задания №2
+```
 def tokenize(text: str):
     if type(text) == str:
         alf = ",.!_;:?😀" # Символы-пробелы
@@ -56,10 +58,11 @@ def tokenize(text: str):
         raise TypeError
 texxt = "emoji 😀 не слово"
 print(tokenize(texxt))
-
+```
 Скриншот задания №2
 ![02](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab03/1.2.PNG)
 ### Код заданий №3 и №4
+```
 def count_freq(dannye):
     new_dannye = []
     for i in dannye:
@@ -90,11 +93,12 @@ spisok = ["bb","aa","bb","aa","cc"]
 n = 2
 print(count_freq(spisok))
 print(top_n(count_freq(spisok), n))
-
+```
 Скриншот заданий №3 и №4
 ![03](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab03/1.3%2C4.PNG)
 ## **Задание B**
 ### Код задания B
+```
 import sys
 import os
 sys.path.insert(0, os.path.join(sys.path[0], '../lib')) # Добавили путь в папку с функциями
@@ -112,11 +116,12 @@ a = text.top_n(a, 5) # Формируем Топ
 print('Топ-5:')
 for x, y in a: # Выводим Топ
     print(f"{x}: {y}")
-
+```
 Скриншот задания B
 ![04](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab03/2.1.PNG)
 ## **Задание Б**
 ### Код задания Б
+```
 import sys
 import os
 sys.path.insert(0, os.path.join(sys.path[0], '../lib')) # Добавили путь в папку с функциями
@@ -140,5 +145,5 @@ print(f"Слово{" " * (max_len - 4)}| Частота") # Красиво вы�
 print("----------------------")
 for x, y in a: # Выводим Топ красиво
     print(f"{x}{" " * (max_len - len(x) + 1)}| {y}") #Красиво выводим слово и частоту ровными столбцами
-
+```
 ![05](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab03/2.2.PNG)
