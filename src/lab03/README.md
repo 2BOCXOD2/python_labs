@@ -27,7 +27,7 @@ def normalize(text: str, *, casefold: bool = True, yo2e: bool = True):
 textt = "   \nЕеЁё   \rАБвгД   \t12(%№?*)?;         "
 print(normalize(textt, casefold=True, yo2e=True))
 ```
-Скриншот задания №1
+### Скриншот задания №1
 ![01](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab03/1.1.PNG)
 ### Код задания №2
 ```
@@ -59,7 +59,7 @@ def tokenize(text: str):
 texxt = "emoji 😀 не слово"
 print(tokenize(texxt))
 ```
-Скриншот задания №2
+### Скриншот задания №2
 ![02](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab03/1.2.PNG)
 ### Код заданий №3 и №4
 ```
@@ -94,7 +94,7 @@ n = 2
 print(count_freq(spisok))
 print(top_n(count_freq(spisok), n))
 ```
-Скриншот заданий №3 и №4
+### Скриншот заданий №3 и №4
 ![03](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab03/1.3%2C4.PNG)
 ## **Задание B**
 ### Код задания B
@@ -117,7 +117,7 @@ print('Топ-5:')
 for x, y in a: # Выводим Топ
     print(f"{x}: {y}")
 ```
-Скриншот задания B
+### Скриншот задания B
 ![04](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab03/2.1.PNG)
 ## **Задание Б**
 ### Код задания Б
@@ -146,4 +146,5 @@ print("----------------------")
 for x, y in a: # Выводим Топ красиво
     print(f"{x}{" " * (max_len - len(x) + 1)}| {y}") #Красиво выводим слово и частоту ровными столбцами
 ```
+### Скриншот задания Б
 ![05](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab03/2.2.PNG)
