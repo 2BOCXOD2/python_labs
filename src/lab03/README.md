@@ -1,7 +1,7 @@
 # **Лабораторная работа №3**
 ## **Задание A**
 ### Код задания №1
-def normalize(text: str, *, casefold: bool = True, yo2e: bool = True):
+```def normalize(text: str, *, casefold: bool = True, yo2e: bool = True):
     if type(text) == str:
         if casefold == True: # Если включено, делает все буквы строчными
             text = text.casefold()
@@ -24,7 +24,7 @@ def normalize(text: str, *, casefold: bool = True, yo2e: bool = True):
         raise TypeError
 
 textt = "   \nЕеЁё   \rАБвгД   \t12(%№?*)?;         "
-print(normalize(textt, casefold=True, yo2e=True))
+print(normalize(textt, casefold=True, yo2e=True))```
 
 Скриншот задания №1
 ![01](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab03/1.1.PNG)
