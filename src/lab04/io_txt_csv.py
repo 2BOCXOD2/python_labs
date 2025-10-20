@@ -14,8 +14,35 @@ def read_text(path: str, encoding: str = "utf-8"):
     else:
         raise ValueError
 
-print(read_text("././data/lab04/input.txt", "utf-8"))
+# print(read_text("././data/lab04/input.txt", "utf-8"))
 
+import csv
+
+def write_csv(rows, path, header=None):
+    if (not rows):
+        if header == None:
+            f = open(path, "w", newline="", encoding="utf-8")
+        else:
+            f = open(path, "w", newline="", encoding="utf-8")
+            csw_zapis = csv.writer(f)
+            csw_zapis.writerow(header)
+            f.close()
+    else:
+        with open(path, mode='w', newline='', encoding='utf-8') as f:
+            w = csv.writer(f)
+            if header is not None:
+                w.writerow(header)
+            for r in rows:
+                w.writerow(r)
+        # f = open(path, "w", newline="", encoding="utf-8")
+        # csw_zapis = csv.writer(f)
+        # csw_zapis.writerow(header)
+        # csw_zapis.writerows(rows)
+
+        f.close()
+
+        
+b = write_csv([(1, 2), (3, 4)], "././data/lab04/check.csv", ("a", "b"))
 
 
 # f = open("C:/Users/GN/Desktop/python_labs/data/lab04/input.txt", "r")
