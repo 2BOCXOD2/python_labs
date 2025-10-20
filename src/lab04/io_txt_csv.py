@@ -1,17 +1,16 @@
-from pathlib import exists
+from pathlib import Path
 def read_text(path: str, encoding: str = "utf-8"):
     if type(path) == str:
-        if encoding == "utf-8":
-            if exists(path):
-                ssilka = path
-                f = open(path, "r")
-                st = f.read()
-                f.close()
-                return st
+        if encoding == "utf-8": # Проверяем кодировку
+            if Path(path).exists(): # Проверяем наличие файла по заданному пути
+                f = open(path, "r") # Считываем файл
+                st = f.read() # Записываем весь файл в строку
+                f.close() # Закрываем файл
+                return st # Возвращаем строку
             else:
-                raise FileNotFoundError
+                raise FileNotFoundError # Файл позаданному пути не существует
         else:
-            raise UnicodeDecodeError
+            raise UnicodeDecodeError # Можно выбрать другую кодировку при сохранении файла в блокноте
     else:
         raise ValueError
 
