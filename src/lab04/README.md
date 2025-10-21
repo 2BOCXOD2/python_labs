@@ -48,6 +48,8 @@ def write_csv(rows, path, header=None): # Передаём в функцию д�
 ```
 ### Скриншот задания №2
 ![02](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab04/1.2.1.PNG)
+### Скриншот записанного файла
+![03](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab04/1.2.2.PNG)
 ## **Задание B**
 ### Код задания B
 ```python
@@ -91,4 +93,6 @@ else:
     raise FileNotFoundError # Если файла нет - ошибка
 ```
 ### Скриншот задания B
-![03](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab03/1.3%2C4.PNG)
+![04](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab04/3.1.PNG)
+### Скриншот записанного файла
+![05](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab04/2.4.PNG)
