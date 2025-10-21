@@ -16,9 +16,10 @@ def read_text(path: str, encoding: str = "utf-8"):
 
 # print(read_text("././data/lab04/input.txt", "utf-8"))
 
-import csv
-from pathlib import Path
+
 def write_csv(rows, path, header=None): # Передаём в функцию данные, путь для сохранения решения, заголовок
+    import csv
+    from pathlib import Path
     if (not rows): # Если данные не переданы
         if header == None: # Проверяем, пустой ли заголовок
             f = open(path, "w", newline="", encoding="utf-8") # Если пустой - создаём пустой файл
