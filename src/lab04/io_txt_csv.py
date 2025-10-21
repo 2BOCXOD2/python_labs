@@ -17,33 +17,32 @@ def read_text(path: str, encoding: str = "utf-8"):
 # print(read_text("././data/lab04/input.txt", "utf-8"))
 
 import csv
-
-def write_csv(rows, path, header=None):
-    if (not rows):
-        if header == None:
-            f = open(path, "w", newline="", encoding="utf-8")
+from pathlib import Path
+def write_csv(rows, path, header=None): # Передаём в функцию данные, путь для сохранения решения, заголовок
+    if (not rows): # Если данные не переданы
+        if header == None: # Проверяем, пустой ли заголовок
+            f = open(path, "w", newline="", encoding="utf-8") # Если пустой - создаём пустой файл
         else:
-            f = open(path, "w", newline="", encoding="utf-8")
+            f = open(path, "w", newline="", encoding="utf-8") # Иначе создаём файл и записываем header
             csw_zapis = csv.writer(f)
             csw_zapis.writerow(header)
-            f.close()
+            f.close() # Закрываем файл
     else:
         with open(path, mode='w', newline='', encoding='utf-8') as f:
-            w = csv.writer(f)
-            if header is not None:
+            for j in range(len(rows) - 1): # Проверяем длину каждого элемента данных
+                if len(rows[j]) != len(rows[j+1]):
+                    raise ValueError
+            w = csv.writer(f) # Создаём удобную переменную записи
+            if header is not None: # Проверяем наличие заголовка и записываем его
                 w.writerow(header)
-            for r in rows:
+            for r in rows: # Записываем данные в файл
                 w.writerow(r)
+b = write_csv([(1, 2), (3, 4)], "././data/lab04/check.csv", ("a", "b"))
+
         # f = open(path, "w", newline="", encoding="utf-8")
         # csw_zapis = csv.writer(f)
         # csw_zapis.writerow(header)
         # csw_zapis.writerows(rows)
-
-        f.close()
-
-        
-b = write_csv([(1, 2), (3, 4)], "././data/lab04/check.csv", ("a", "b"))
-
 
 # f = open("C:/Users/GN/Desktop/python_labs/data/lab04/input.txt", "r")
 # f = open("././data/lab04/input.txt", "r")
