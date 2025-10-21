@@ -93,6 +93,6 @@ else:
     raise FileNotFoundError # Если файла нет - ошибка
 ```
 ### Скриншот задания B
-![04](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab04/3.1.PNG)
+![04](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab04/2.4.PNG)
 ### Скриншот записанного файла
-![05](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab04/2.4.PNG)
+![05](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab04/2.3.PNG)
