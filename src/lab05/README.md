@@ -28,9 +28,9 @@ def json_to_csv(json_path: str, csv_path: str):
 # a = json_to_csv("././data/samples/people.json", "././data/out/people.csv")
 ```
 ### Скриншот задания №1
-![01](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab04/1.1.PNG)
+![01](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab05/1.1.PNG)
 ### Скриншот записанного файла
-![02](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab04/1.2.1.PNG)
+![02](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab05/1.2.PNG)
 ### Код задания №2
 ```python
 def csv_to_json(csv_path: str, json_path: str):
@@ -59,9 +59,9 @@ def csv_to_json(csv_path: str, json_path: str):
 # a = csv_to_json("././data/samples/people1.csv", "././data/out/people1.json")
 ```
 ### Скриншот задания №2
-![03](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab04/1.2.2.PNG)
+![03](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab05/1.3.PNG)
 ### Скриншот записанного файла
-![04](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab04/1.2.2.PNG)
+![04](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab05/1.4.PNG)
 ## **Задание B**
 ### Код задания B
 ```python
@@ -88,6 +88,6 @@ def csv_to_xlsx(csv_path: str, xlsx_path: str):
 a = csv_to_xlsx("././data/samples/people1.csv", "././data/out/people.xlsx")
 ```
 ### Скриншот задания B
-![05](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab04/2.4.PNG)
+![05](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab05/1.5.PNG)
 ### Скриншот записанного файла
-![06](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab04/2.3.PNG)
+![06](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab05/1.6.PNG)
