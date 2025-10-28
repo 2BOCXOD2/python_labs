@@ -12,7 +12,7 @@ def csv_to_xlsx(csv_path: str, xlsx_path: str):
             else:
                 wb = openpyxl.Workbook() # Создаём новый файл
                 ws = wb.active # Создаём новый лист
-                ws.title = "Лист1" # Называем новый лист
+                ws.title = "Sheet1" # Называем новый лист
                 with open(csv_path, "r", encoding="utf-8") as fc: # Открываем csv файл
                     for row in csv.reader(fc): # Построчно считываем
                         ws.append(row) # Записываем построчно
