@@ -17,5 +17,12 @@ def csv_to_xlsx(csv_path: str, xlsx_path: str):
                     for row in csv.reader(fc): # Построчно считываем
                         ws.append(row) # Записываем построчно
                         wb.save(xlsx_path) # Сохраняем файл
-
+                for col in ws.columns: # Для каждой солонки
+                    max_len = 8 # Максимальная длина не меньше 8
+                    for cell in col: # Для каждой ячейки
+                        val = cell.value # Получаем значение
+                        len_cell = len(str(val)) # Считаем длину значения
+                        max_len = max(max_len, len_cell) # Берём максимум
+                    format = (max_len) 
+                    ws.column_dimensions[str(col)].width = format # Задаём формат для каждой клетки
 a = csv_to_xlsx("././data/samples/people1.csv", "././data/out/people.xlsx")
