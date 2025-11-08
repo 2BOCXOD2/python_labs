@@ -64,6 +64,7 @@ def count_freq(dannye):
         col = dannye.count(z) # Количество вхождений
         slovar[z] = col
     return slovar
+
 def top_n(dictt, n_top):
     a = []
     for key, value in dictt.items():
