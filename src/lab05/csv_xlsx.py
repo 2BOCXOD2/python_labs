@@ -25,4 +25,5 @@ def csv_to_xlsx(csv_path: str, xlsx_path: str):
                         max_len = max(max_len, len_cell) # Берём максимум
                     format = (max_len) 
                     ws.column_dimensions[str(col)].width = format # Задаём формат для каждой клетки
-a = csv_to_xlsx("././data/samples/people1.csv", "././data/out/people.xlsx")
+                    
+# a = csv_to_xlsx("././data/samples/people1.csv", "././data/out/people.xlsx")
