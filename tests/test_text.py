@@ -5,6 +5,7 @@ import os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))) # Добавили путь в папку с функциями
 from src.lib.text import normalize, tokenize, count_freq, top_n
 
+
 @pytest.mark.parametrize(
     "source, expected",
     [
