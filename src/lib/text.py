@@ -21,8 +21,8 @@ def normalize(text: str, *, casefold: bool = True, yo2e: bool = True):
     else:
         raise TypeError
 
-# textt = "   \nЕеЁё   \rАБвгД   \t12(%№?*)?;         "
-# print(normalize(textt, casefold=True, yo2e=True))
+textt = "ПрИвЕт \nМИр \t" # "   \nЕеЁё   \rАБвгД   \t12(%№?*)?;         "
+print(normalize(textt, casefold=True, yo2e=True))
 
 def tokenize(text: str):
     if type(text) == str:
