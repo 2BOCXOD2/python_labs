@@ -1,3 +1,70 @@
+# **Лабораторная работа №7**
+## **Создание и заполнение pyproject.toml**
+![01]()
+## **Задание A**
+### Код задания A
+```python
+import pytest
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))) # Добавили путь в папку с функциями
+from src.lib.text import normalize, tokenize, count_freq, top_n
+
+
+@pytest.mark.parametrize(
+    "source, expected",
+    [
+        ("ПрИвЕт \nМИр \t", "привет мир"),
+        ("ёжик, Ёлка", "ежик, елка"),
+        ("Hello \r \nWorld", "hello world"),
+        ("  двойные   пробелы  ", "двойные пробелы"),
+    ],
+)
+def test_normalize_basic(source, expected):
+    assert normalize(source, casefold=True, yo2e=True) == expected
+
+
+@pytest.mark.parametrize(
+    "source, expected",
+    [
+        ("hello,world!!!", ["hello", "world"]),
+        ("это по-настоящему круто", ["это", "по-настоящему", "круто"]),
+        ("2025 год", ["2025", "год"]),
+        ("emoji 😀 не слово", ["emoji", "не", "слово"]),
+    ],
+)
+def test_tokenize_basic(source, expected):
+    assert tokenize(source) == expected
+
+
+@pytest.mark.parametrize(
+    "source, expected",
+    [
+        (["a","b","a","c","b","a"], {"a":3,"b":2,"c":1}),
+        (["bb","aa","bb","aa","cc"], {"aa":2,"bb":2,"cc":1}),
+    ],
+)
+def test_count_freq_and_top_n(source, expected):
+    assert count_freq(source) == expected
+
+
+@pytest.mark.parametrize(
+    "source, top, expected",
+    [
+        ({"a":3,"b":2,"c":1}, 2, [("a",3), ("b",2)]),
+        ({"aa":2,"bb":2,"cc":1}, 5, [("aa",2), ("bb",2), ("cc",1)]),
+    ],
+)
+def test_top_n_tie_breaker(source, top, expected):
+    assert top_n(source, top) == expected
+```
+### Проведение быстрого теста
+![02]()
+### Проверка покрытия
+![03]()
+## **Задание Б**
+### Код задания Б
+```python
 import pytest
 
 # from src.lib.text import normalize, tokenize, count_freq, top_n # Не работает, пишет - нет модуля src
@@ -140,3 +207,14 @@ def test_csv_to_json_roundtrip(tmp_path: Path):
     assert {"name", "age"} <= set(
         data[0].keys()
     )  # Проверяем наличие полей "name" и "age" в первой строке csv
+```
+### Проведение быстрого теста задания Б1
+![04]()
+### Проверка покрытия Б1
+![05]()
+### Проведение быстрого теста задания Б2
+![06]()
+### Проверка покрытия Б2
+![07]()
+## **Проверка на соответствие black**
+![08]()
