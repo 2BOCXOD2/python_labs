@@ -1,6 +1,6 @@
 # **Лабораторная работа №7**
 ## **Создание и заполнение pyproject.toml**
-![01]()
+![01](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab07/0.PNG)
 ## **Задание A**
 ### Код задания A
 ```python
@@ -59,9 +59,9 @@ def test_top_n_tie_breaker(source, top, expected):
     assert top_n(source, top) == expected
 ```
 ### Проведение быстрого теста
-![02]()
+![02](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab07/1.1.PNG)
 ### Проверка покрытия
-![03]()
+![03](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab07/1.2.PNG)
 ## **Задание Б**
 ### Код задания Б
 ```python
@@ -209,12 +209,12 @@ def test_csv_to_json_roundtrip(tmp_path: Path):
     )  # Проверяем наличие полей "name" и "age" в первой строке csv
 ```
 ### Проведение быстрого теста задания Б1
-![04]()
+![04](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab07/2.1.PNG)
 ### Проверка покрытия Б1
-![05]()
+![05](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab07/2.2.PNG)
 ### Проведение быстрого теста задания Б2
-![06]()
+![06](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab07/2.3.PNG)
 ### Проверка покрытия Б2
-![07]()
+![07](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab07/2.4.PNG)
 ## **Проверка на соответствие black**
-![08]()
+![08](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab07/2.5.PNG)
