@@ -217,4 +217,4 @@ def test_csv_to_json_roundtrip(tmp_path: Path):
 ### Проверка покрытия Б2
 ![07](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab07/2.4.PNG)
 ## **Проверка на соответствие black**
-![08](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab07/2.5.PNG)
+![08](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab07/2.5.1.PNG)
