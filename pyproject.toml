@@ -1,16 +1,16 @@
-[build-system]
-requires = ["setuptools >= 77.0.3"]
-build-backend = "setuptools.build_meta"
+[build-system] # Этот раздел описывает систему сборки проекта
+requires = ["setuptools >= 77.0.3"] # Требуемые инструменты сборки
+build-backend = "setuptools.build_meta" # Система построения пакетов
 
 
-[project]
-name = "Moi_laby_po_proge"
-version = "24.11.2025"
+[project] # Здесь содержатся метаданные самого проекта
+name = "Moi_laby_po_proge" # Название проекта
+version = "24.11.2025" # Версия проекта
 
-[project.optional-dependencies]
+[project.optional-dependencies] # Опциональные зависимости нужны для разработки и тестирования
 dev = [
-  "pytest>=8.0",
-  "pytest-cov>=5.0",
-  "black>=24.0",
-  "ruff>=0.6"
+  "pytest>=8.0", # Библиотека для модульного тестирования
+  "pytest-cov>=5.0", # Инструмент покрытия тестами
+  "black>=24.0", # Форматировщик кода
+  "ruff>=0.6" # Linter - программа для проверки качества кода и поиска ошибок
 ]
