@@ -45,12 +45,12 @@ if __name__ == "__main__": # Запуск программы
         print(stud)
 ```
 ### Результат проверки функционала
-![01]()
+![01](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab08/1%20Сериалайз%20с%20выводом.PNG)
 
 ### students_input
-![02]()
+![02](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab08/2%20Студенты%20инпут%20джейсон.PNG)
 ### students_output
-![03]()
+![03](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab08/3%20Студенты%20оутпут%20джейсон.PNG)
 
 ## **models**
 ### Код models
@@ -60,34 +60,31 @@ import datetime
 from datetime import date
 
 
-@dataclass
-class Student:
+@dataclass # Автоматически генерирует специальные методы для классов, ориентированных на хранение данных, что сокращает шаблонный код.
+class Student: # Создаём класс
     fio: str
     birthdate: str
     group: str
     gpa: float
 
     def __post_init__(self):
-        # Проверяем правильность формата даты и диапазон оценки
-        try:
+        try: # Проверяем правильность формата даты и диапазон оценки
             dt_obj = datetime.datetime.strptime(self.birthdate, "%Y-%m-%d").date()
         except ValueError as e:
             raise ValueError(f"Ошибка в формате даты {self.birthdate}: должно быть 'ГГГГ-ММ-ДД'") from e
             
-        if not (0 <= self.gpa <= 10):
+        if not (0 <= self.gpa <= 10): # Проверка правильности оценки
             raise ValueError("Средняя оценка должна находиться в диапазоне от 0 до 10.")
     
-    def age(self) -> int:
-        """Возвращает возраст студента"""
-        birthday = datetime.datetime.strptime(self.birthdate, "%Y-%m-%d").date()
-        today = date.today()
-        years_diff = today.year - birthday.year
-        is_before_birthday = (today.month, today.day) < (birthday.month, birthday.day)
-        return years_diff - int(is_before_birthday)
+    def age(self) -> int: # Функция подсчёта возраста
+        birthday = datetime.datetime.strptime(self.birthdate, "%Y-%m-%d").date() # Записываем дату в переменную для удобного сравнения
+        today = date.today() # Получаем сегодняшнюю дату
+        years_diff = today.year - birthday.year # Вычисляем разницу в годах
+        is_before_birthday = (today.month, today.day) < (birthday.month, birthday.day) # Проверка наступления дня рождения
+        return years_diff - int(is_before_birthday) # Возвращаем число полных лет
 
-    def to_dict(self) -> dict:
-        """Преобразует объект в словарь"""
-        return {
+    def to_dict(self) -> dict: # self указывает на объект, с которым работает функция
+        return { # Преобразуем объект в словарь
             "fio": self.fio,
             "birthdate": self.birthdate,
             "group": self.group,
@@ -96,17 +93,15 @@ class Student:
 
     @classmethod
     def from_dict(cls, d: dict):
-        """Создает экземпляр класса из словаря"""
-        return cls(
+        return cls( # Создает экземпляр класса из словаря
             fio=d["fio"],
             birthdate=d["birthdate"],
             group=d["group"],
             gpa=float(d["gpa"])
         )
 
-    def __str__(self):
-        """Строковое представление объекта"""
-        return f"{self.fio}, группа {self.group}, средний балл {self.gpa:.2f}"
+    def __str__(self): # Представляем объект как строку
+        return f"{self.fio}, группа {self.group}, средний балл {self.gpa:.2f}, возраст {self.age()} лет"
 ```
-### Проведение быстрого теста задания Б2
-![04]()
+### models.py
+![04](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab08/4%20Модельс.PNG)
