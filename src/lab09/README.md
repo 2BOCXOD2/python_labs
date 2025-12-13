@@ -1,3 +1,7 @@
+# **Лабораторная работа №9**
+## **group**
+### Код group
+```python
 import csv
 from typing import List, Dict
 from pathlib import Path
@@ -226,4 +230,13 @@ if __name__ == "__main__":
 
 # python -m src.lab09.group
 
+
+
+# python -m src.lab09.group
+```
+### Результат проверки функционала 1
+![01](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab09/1%20Итог.PNG)
+
+### Результат проверки функционала 2 *
+![02](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab09/2%20Итог.PNG)
 
