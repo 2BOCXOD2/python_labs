@@ -105,3 +105,5 @@ class Student: # Создаём класс
 ```
 ### models.py
 ![04](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab08/4%20Модельс.PNG)
+
+
